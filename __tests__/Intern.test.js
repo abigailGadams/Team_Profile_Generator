@@ -1,7 +1,9 @@
+const Employee = require("../library/Employee");
 const Intern = require("../library/Intern");
+
 describe("Testing Intern constructor", () => {
-  test("Test name property", () => {
-    const Abby = new Employee("Abby", 1, "abigailgadams0@gmail.com");
-    expect(Abby.name).toBe("Abby");
+  test("Test school property", () => {
+    const school = new Intern("University of Arizona");
+    expect(school.name).toBe("University of Arizona");
   });
 });
