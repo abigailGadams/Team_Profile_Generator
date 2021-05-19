@@ -1,39 +1,34 @@
-// // var dog = {
-// //   name: "berkley",
-// //   breed: "french bulldog",
-// //   getName: function () {
-// //     return this.name;
-// //   },
-// // };
+const createHTML = require("./src/createHTML");
+const { writeMarkup, copyCSS } = require("./src/writeFiles");
 
-// // var cat = {
-// //   name: "shadow",
-// //   breed: "munchkin",
-// //   getName: function () {
-// //     return this.name;
-// //   },
-// // };
+const teamArray = []; //  array of team members
 
-// class Food {
-//   constructor(type, brand) {
-//     this.type = type;
-//     this.brand = brand;
-//   }
-//   getBrand() {
-//     return this.brand;
-//   }
-// }
+console.log(
+  `===============  WELCOME TO TEAM PROFILE MANAGER ================
+  
+    This program creates a web page from the information you enter: 
+      * One manager (required)
+      * Any number of employees, engineers, and interns. 
+    
+    Team information is saved in "index.html" and "style.css"
+    located in the ./dist directory, which must exist
+    before running this program.
+    
+  ===========================================================
+        Add New Team Member (all fields required)
+  ===========================================================
+  `
+);
+let markupString = "";
 
-// class Animal extends Food {
-//   constructor(name, breed, type, brand) {
-//     super(type, brand);// imports all properties and methods of attached constructor
-//     this.name = name;
-//     this.breed = breed;
-//   }
-//   getName() {
-//     return this.name;
-//   }
-// }
-
-// var dog = new Animal("berkley", "frenchie", "dog", "purina");
-// var cat = new Animal("shadow", "munchkin", "cat", "iams");
+promptTeam(teamArray).then((teamArray) => {
+  // console.log("final team is " + JSON.stringify(teamArray));
+  markupString = generateHTML(teamArray);
+  writeMarkup(markupString);
+  copyCSS();
+  console.log(`
+    ===========================================================
+       DONE! Your information is ready in ./dist/index.html
+    ===========================================================
+    `);
+});
