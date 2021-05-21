@@ -40,9 +40,9 @@ body {
 
 .card {
   width: 15rem;
-  height: 18rem;
+  height: 11rem;
   margin: 1rem;
-  padding: 2rem;
+  padding: 0.5rem;
 }
 
 .card-title {
@@ -51,4 +51,9 @@ body {
 
 .name-card-title {
   font-style: oblique;
+}
+
+list-group-item {
+  font-size: 1rem;
+  scroll-padding: 5%;
 }
