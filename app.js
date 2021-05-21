@@ -133,10 +133,3 @@ function getEngineerInfo() {
 }
 
 getManagerInfo();
-// Must contain 3 elements: name of file, data to write onto file(html), and callback f(n)
-// fs.writeFile("./index.html", generatePage(profileDataArgs), (err) => {
-//   // display err msg if error occurs
-//   if (err) throw new Error(err);
-
-//   console.log("Portfolio complete! Check out index.html to see the output!");
-// });

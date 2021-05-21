@@ -1,0 +1,54 @@
+:root {
+  --light: #f9eded;
+  --light-blue: #e3e7e9;
+  --medium-blue: #c0d6e4;
+  --dark-blue: #29364f;
+  --dark: #181b26;
+  --weather-card: rgb(252, 216, 150);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1rem;
+}
+
+.jumbotron {
+  background-color: var(--dark-blue #29364f);
+  height: 5vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+h1 {
+  margin: auto;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--light);
+  background-color: #181b26;
+}
+
+body {
+  background-color: var(--light-blue);
+}
+
+.card {
+  width: 15rem;
+  height: 18rem;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.card-title {
+  color: var(--dark-blue);
+}
+
+.name-card-title {
+  font-style: oblique;
+}
